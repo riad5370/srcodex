@@ -1,0 +1,56 @@
+/* =======================
+                My CSS
+======================= */
+*{
+    text-color: #fff !important;
+}
+
+.logo-img{
+    width: 30%;
+}
+
+a:focus {
+    color: #ed4e1d !important;
+}
+
+.boder-logo {
+
+}
+
+.bg-primary-2 {
+    background-color: #6f11f5 !important;
+}
+
+.bg-primary-3 {
+    background-color: #ed4e1d !important;
+}
+
+.text-link{
+    color: #ffffff !important;
+}
+
+
+.va-middle {
+    color: #ffffff !important;
+}
+
+p{
+    color: #ffffff !important;
+}
+
+p .title-color{
+    color: #ffffff !important;
+}
+
+.page-header {
+    padding: 150px 0 80px 0 !important;
+ }
+.bg-gradient-body{
+    background: linear-gradient(175deg, #650afc 0%, #e44aec 40%,  #ffff07 100%) !important;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+      font-size: 2rem !important; /* Adjust the mobile font size as needed */
+    }
+  }
