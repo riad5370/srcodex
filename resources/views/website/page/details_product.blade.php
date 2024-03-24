@@ -18,9 +18,11 @@
                 <div class="col-lg-6 tablet-lg-top-30 page-content" data-aos="fade-up" data-aos-delay="100">
                     <div id="product-swiper" class="swiper-container rounded">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="{{asset('images/products/preview/'.$product_info->preview)}}" alt=""></div>
-                            <div class="swiper-slide"><img src="assets/images/7.jpg" alt=""></div>
-                            <div class="swiper-slide"><img src="assets/images/8.jpg" alt=""></div>
+                            @foreach ($thumbnails as $thumbnail)
+                                
+                            
+                            <div class="swiper-slide"><img src="{{asset('images/products/thumbnail/'.$thumbnail->thumbnail??'')}}" alt=""></div>
+                            @endforeach
                         </div><!-- / swiper-wrapper -->
                         <!-- Add Arrows -->
                         <div class="swiper-pagination"></div>
@@ -166,3 +168,16 @@
 </div><!--  SRCodeX main-container -->
 
 @endsection
+@push('js')
+  <!-- Swiper Slider -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+      var swiper = new Swiper('#product-swiper', {
+          pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+          },
+          keyboard: true,
+      });
+  </script>
+@endpush

@@ -20,12 +20,14 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="{{asset('frontend')}}/assets/css/animate.min.css">
     <link rel="stylesheet" href="{{asset('frontend')}}/assets/css/aos.css">
+    <link rel="stylesheet" href="{{asset('frontend')}}/assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="{{asset('frontend')}}/assets/css/style.css">
     <!-- Fonts -->
+    <link rel="stylesheet" href="{{asset('frontend')}}/assets/css/my.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         type="text/css">
     <!-- My CSS  -->
-    <link rel="stylesheet" href="{{asset('frontend')}}/assets/css/my.css">
+    
 
     @stack('css')
 </head>

@@ -117,12 +117,21 @@
                         </div>
                    
                         <div class="col-xs-6">
+                            <label for="">Preview Image:</label>
                             <label class="ace-file-input"><input name="preview" type="file" id="id-input-file-2" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])"><span class="ace-file-container" data-title="Choose"><span class="ace-file-name" data-title="No File ..."><i class=" ace-icon fa fa-upload"></i></span></span><a class="remove" href="#"><i class=" ace-icon fa fa-times"></i></a></label>
                             <img src="{{ asset('images/products/preview/' . $product->preview) }}" width="70px;" id="blah" alt="">
                         </div>
                         <div class="col-xs-6">
-                            <label class="ace-file-input"><input name="thumbnail[]" multiple type="file" id="id-input-file-2" onchange="document.getElementById('blahh').src = window.URL.createObjectURL(this.files[0])"><span class="ace-file-container" data-title="Choose"><span class="ace-file-name" data-title="No File ..."><i class=" ace-icon fa fa-upload"></i></span></span><a class="remove" href="#"><i class=" ace-icon fa fa-times"></i></a></label>
-                            <img src="{{ asset('images/products/thumbnail/' . $product->thumbnail) }}" width="70px;" id="blahh" alt="">
+                            <label for="">Thumbnail Image:</label>
+                            <label class="ace-file-input"><input name="thumbnail[]" multiple type="file" id="id-input-file-2" onchange="previewImages(this)"><span class="ace-file-container" data-title="Choose"><span class="ace-file-name" data-title="No File ..."><i class=" ace-icon fa fa-upload"></i></span></span><a class="remove" href="#"><i class=" ace-icon fa fa-times"></i></a></label>
+
+                              <div id="image-preview-container">
+                                <label class="middle">
+                                    @foreach ($photos as $photo)
+                                    <img src="{{ asset('images/products/thumbnail/' . $photo->thumbnail) }}" width="70px;" id="blahh" alt="">
+                                    @endforeach
+                                </label>
+                            </div>
                         </div>
                     <hr>
                     <div class="wizard-actions">
@@ -158,5 +167,29 @@
         });
 
     </script>
+
+<script>
+    function previewImages(input) {
+        var previewContainer = document.getElementById('image-preview-container');
+        previewContainer.innerHTML = ''; // Clear previous previews
+
+        if (input.files) {
+            for (var i = 0; i < input.files.length; i++) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    var imgElement = document.createElement('img');
+                    imgElement.setAttribute('height', '50'); // Adjusted height
+                    imgElement.setAttribute('width', '50');  // Adjusted width
+                    imgElement.src = e.target.result;
+
+                    previewContainer.appendChild(imgElement);
+                };
+
+                reader.readAsDataURL(input.files[i]);
+            }
+        }
+    }
+</script>
    
 @endpush

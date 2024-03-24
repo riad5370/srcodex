@@ -99,6 +99,7 @@ class ProductController extends Controller
         return view('admin.product.edit',[
             'product'=>$product,
             'categories'=>Category::all(),
+            'photos'=>Thumbnail::all()
         ]);
     }
 
