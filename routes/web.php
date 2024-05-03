@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\CustomerMailController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -12,6 +13,8 @@ Route::get('aboutus',[FrontendController::class,'aboutus'])->name('aboutus');
 Route::get('category-product/{categoryId}',[FrontendController::class,'categoryProduct'])->name('category.product');
 Route::get('all-product',[FrontendController::class,'allProduct'])->name('all.product');
 Route::get('product-details/{slug}',[FrontendController::class,'details'])->name('details');
+//customar mail
+Route::Post('/cutomer/mail',[CustomerMailController::class,'mailSent'])->name('mail.sent');
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
