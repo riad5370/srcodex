@@ -66,6 +66,10 @@
     <script src="{{asset('frontend')}}/assets/js/bg-fixed.min.js"></script>
     <!--  SRCodeX LTD Codes bg-fixed -->
 
+    <!--=============== EMAIL JS ===============-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
     @stack('js')
 
 </body>

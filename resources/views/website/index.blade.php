@@ -221,15 +221,14 @@
         <div class="row v-center">
             <div class="col-lg-6 tablet-lg-top-45">
                 <div class="promo-box bg-glass p-40" data-aos="fade-up">
-                    @if (session('message'))
+                    {{-- @if (session('message'))
                         <div class="alert alert-success">{{session('message')}}</div>
-                    @endif
-                    <form action="{{route('mail.sent')}}" class="needs-validation" id="form-validation3" method="POST" novalidate="novalidate">
-                        @csrf
+                    @endif --}}
+                    <form class="needs-validation" id="contact-form" method="POST" novalidate="novalidate">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="contact-name4" name="name"
+                                    <input type="text" class="form-control" id="contact-name" name="user_name"
                                         placeholder="&#xf2bd; Full Name" required=""
                                         style="font-family:'Font Awesome 5 Free', sans-serif !important; font-weight: 400">
                                 </div><!--  SRCodeX LTD Codes form-group -->
@@ -237,26 +236,26 @@
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="contact-email4"
-                                        name="email" placeholder="&#xf0e0; Email" required=""
+                                    <input type="email" class="form-control" id="contact-email"
+                                    name="user_email" placeholder="&#xf0e0; Email" required=""
                                         style="font-family:'Font Awesome 5 Free', sans-serif !important; font-weight: 400">
                                 </div><!--  SRCodeX LTD Codes form-group -->
                             </div><!--  SRCodeX LTD Codes column -->
 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="contact-subject4"
-                                        name="subject" placeholder="&#xf059; Subject"
+                                    <input type="text" class="form-control" id="contact-project"
+                                    name="user_project" placeholder="&#xf059; Subject"
                                         style="font-family:'Font Awesome 5 Free', sans-serif !important; font-weight: 400">
                                 </div><!--  SRCodeX LTD Codes form-group -->
                             </div><!--  SRCodeX LTD Codes column -->
                         </div><!--  SRCodeX LTD Codes row -->
                         <div class="form-group">
-                            <textarea id="contact-message4" class="form-control" name="message" rows="5"
+                            <textarea id="contact-message" class="form-control" name="message" rows="5"
                                 placeholder="&#xf4ad; Message" required=""
                                 style="font-family:'Font Awesome 5 Free', sans-serif !important; font-weight: 400; min-height: 115px; max-height: 150px;"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-warning btn-submit">Send Message</button>
+                        <button type="submit" id="contact-button" class="btn btn-warning btn-submit contact__button">Send Message</button>
                     </form><!--  SRCodeX LTD Codes form-group -->
                 </div><!--  SRCodeX LTD Codes promo-box -->
             </div><!--  SRCodeX LTD Codes column -->

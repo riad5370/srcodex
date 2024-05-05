@@ -1,9 +1,9 @@
 @extends('website.include.master')
 @push('css')
-<link rel="stylesheet" href="{{asset('frontend')}}/assets/css/swiper-bundle.min.css">
+<link rel="stylesheet" href="{{asset('frontend')}}/{{asset('frontend')}}/assets/css/swiper-bundle.min.css">
 @endpush
 @section('body')
-  <header class="page-header bg-gradient-body">
+    <header class="page-header bg-gradient-body">
         <div class="container">
             <h1 class="page-title mb-15" data-aos="fade-down">ABOUT US</h1>
             <nav class="breadcrumb p-y-0 p-x-0" data-aos="fade-right">
@@ -33,48 +33,60 @@
 
 
                         <div class="widget" data-aos="fade-up" data-aos-delay="600">
-                            <h6 class="widget-title">Categories</h6>
-                            <div class="row">
-                                <div class="col-6">
-                                    <ul class="list-unstyled list-icon list-arrow list-primary list-has-link menu-list mb-0 tablet-lg-top">
-                                        <li class="mb-10"><a href="#x">Design</a></li>
-                                        <li class="mb-10"><a href="#x">Illustration</a></li>
-                                        <li class="mb-10"><a href="#x">Branding</a></li>
-                                        <li class="mb-0"><a href="#x">Web Design</a></li>
-                                    </ul><!-- / list-unstyled -->
-                                </div><!-- / column -->
+                            <h6 class="widget-title">Message from CEO</h6>
+                            <p class=" fs-10 text-white mb-14">Honored and Grateful: Receiving the award from the Bangladesh Association of Software & Information Services (BASIS).</p>
+                            <p class=" fs-10 text-white mb-14">I extend my heartfelt thanks to Mr. Russell T. Ahmed, President of BASIS, for gracing the occasion and presenting me with this prestigious award. </p>
+                        </div><!-- / widget -->
 
-                                <div class="col-6">
-                                    <ul class="list-unstyled list-icon list-arrow list-primary list-has-link menu-list mb-0">
-                                        <li class="mb-10"><a href="#x">Travel</a></li>
-                                        <li class="mb-10"><a href="#x">Food</a></li>
-                                        <li class="mb-10"><a href="#x">Health</a></li>
-                                        <li class="mb-0"><a href="#x">Sport</a></li>
-                                    </ul><!-- / list-icon -->
+
+                        <div class="widget" data-aos="fade-up" data-aos-delay="700">
+                            <h6 class="widget-title">My Certificate's</h6>
+                            <p class=" fs-14 text-white mb-14">I am a certified Software Developer with 4 years of experience in PHP and Laravel.</p>
+                            <div class="row">
+                                <div class="col-12 fs-14 text-white">
+                                    <ul class="list-unstyled list-icon list-arrow list-primary list-has-link menu-list mb-0 tablet-lg-top">
+                                        <li class="mb-10"><a class="text-white" href="#x">Professional English Communication</a><p class="fs-10"> &nbsp;&nbsp;&nbsp;&nbsp; FROM: WSDA ( New Zealand )</p></li>
+                                        <li class="mb-10"><a class="text-white" href="#x">Advanced Web Designing</a><p class="fs-10"> &nbsp;&nbsp;&nbsp;&nbsp; FROM: Anudip Foundation ( India )</p></li>
+                                        <li class="mb-10"><a class="text-white" href="#x">Diploma in Professional WAD</a><p class="fs-10"> &nbsp;&nbsp;&nbsp;&nbsp; FROM: IsDB-BISEW </p></li>
+                                        <li class="mb-10"><a class="text-white" href="#x">PHP with Laravel Framework</a><p class="fs-10"> &nbsp;&nbsp;&nbsp;&nbsp; FROM: BASIS-BITM</p></li>
+                                        <li class="mb-10"><a class="text-white" href="#x">Web Design & Development</a><p class="fs-10"> &nbsp;&nbsp;&nbsp;&nbsp; FROM: Daffodil Institute of IT</p></li>
+                                        <li class="mb-10"><a class="text-white" href="#x">Diploma in Computer Engineering</a><p class="fs-10"> &nbsp;&nbsp;&nbsp;&nbsp; FROM: ICT-Bangladesh ( 4 year's Diploma)</p></li>
+                                        
+                                    </ul><!-- / list-unstyled -->
                                 </div><!-- / column -->
                             </div><!-- / row -->
                         </div><!-- / widget -->
 
-                        <div class="widget" data-aos="fade-up" data-aos-delay="700">
-                            <h6 class="widget-title">Newsletter</h6>
-                            <p class="mb-20">Quisque aliquet lorem nec dui posuere des et, scelerisque ultrices metus aliquam.</p>
-                            <div class="input-group input-w-overlap-btn">
-                                <input type="text" class="form-control pill" placeholder="&#xf0e0; Email" style="font-family:'Font Awesome 5 Free', sans-serif !important; font-weight: 400">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-sm btn-primary lh-0 overlapping-btn big-btn pill" type="button"><i class="far fa-paper-plane mr-5"></i> Subscribe</button>
-                                </span><!-- / input-group-btn -->
-                            </div><!-- / input-group -->
-                        </div><!-- / widget -->
+                        
 
                     </div><!-- / column -->
                     <div class="col-lg-8 tablet-lg-top-30 page-content">
                         <div class="blog-post mb-50">
                             <div class="page-content" data-aos="fade-up" data-aos-delay="300">
                                 <img src="{{asset('frontend')}}/assets/images/basis.jpeg" alt="" class="raised-sm rounded-10">
-                                <p class="fs-12 bt-1 bb-1 border-secondary p-15 m-y-30"><i class="far fa-user mr-5 fs-30"></i>  <span class="fs-30">Merida Swan </span>  <span class="pull-right"></span></p>
-                                <p>Aenean scelerisque, eros vel gravida euismod, quam odio luctus leo, a mollis nisi erat quis est. Vivamus in turpis quis metus gravida porttitor ac cursus augue. Nunc finibus ac risus non imperdiet. Donec vitae erat ultrices, consequat sapien ut, sodales leo. Sed suscipit egestas tempus. Donec eleifend est odio.</p>
-                                <p>Vivamus efficitur, elit non viverra egestas, ante arcu congue turpis, quis euismod libero lectus ac dolor. Sed semper magna semper egestas commodo. Curabitur sed nisi vel ligula efficitur condimentum. Phasellus nec nunc porta dolor condimentum dictum in in urna. Nullam purus quam, pretium eu euismod vitae, egestas quis ligula.</p>
-                                <p class="mb-0">Quisque id odio id lectus condimentum sollicitudin id id felis. In nulla lectus, maximus in massa sit amet, varius ultricies tortor. Morbi ullamcorper molestie consectetur. Sed nisi nibh, rutrum.</p>
+                                <p class="fs-12 bt-1 bb-1 border-secondary p-15 m-y-10"><i class="far fa-user mr-5 fs-30"></i>  <span class="fs-30">Who are we..? </span>  <span class="pull-right"></span></p>
+                                <br>
+                                <h3 class="fab fs-26 text-white va-top mr-5 mb-5">SRCodeX LTD: Your Partner in Digital Success.</h3>
+                                <br><br>
+                                <h4 class="fab fs-20 text-white">We're a Bangladeshi company passionate about bridging the gap between cutting-edge technology and real-world solutions. We offer a comprehensive range of services, including:</h4>
+                                <li class="fs-14 text-white">Facebook Marketing: Boost sales & simplify operations.</li>
+                                <li class="fs-14 text-white">Graphics Design: Our creative team crafts stunning visuals that elevate your brand.</li>
+                                <li class="fs-14 text-white">Web Application Development: We build user-friendly web applications for your business.</li>
+                                
+                                <br>
+                                <h3 class="fab fs-26 text-white va-top mr-5 mb-5">Our Mission: Your Success.</h3>
+                                <h4 class="fab fs-20 text-white">At SRCodeX LTD, our goal is 100% client satisfaction. We achieve this by:</h4>
+                                <li class="fs-14 text-white">Collaborating closely with you to understand your unique needs.</li>
+                                <li class="fs-14 text-white">Delivering innovative and reliable solutions that meet your specific requirements.</li>
+                                <li class="fs-14 text-white">Utilising a talented team of software architects, engineers, and designers.</li>
+                                <li class="fs-14 text-white">Employing versatile project management to ensure smooth execution.</li>
+                                <br>
+                                <h3 class="fab fs-26 text-white va-top mr-5 mb-5">Beyond Software:</h3>
+                                <h4 class="fab fs-20 text-white">While software development is our core expertise, we also offer additional services like 3D & 2D Graphics Design, Facebook marketing, keeping an eye on global trends and client needs.</h4>
+                                <br>
+                                <br>
+                                <h3 class="fab fs-26 text-white va-top mr-5 mb-5">Ready to take your business digital..?</h3>
+                                
                             </div><!-- / post-content -->
                         </div><!-- / blog-post -->
 
@@ -109,7 +121,7 @@
             </section>
             <!-- / sliders -->
             <!-- ############################################## -->
-            <section class="lg bg-img">
+            {{-- <section class="lg bg-img">
                 <div class="container">
                     <h1 class="p-y-40 p-x-0 promo-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
                         Our Team
@@ -118,7 +130,7 @@
                         <div class="col-lg-4">
                             <div class="card card-w-raised-img-top" data-aos="fade-up">
                                 <div class="card-body text-center">
-                                    <img class="card-raised-img-top mb-30 circle raised-sm w-50" src="https://kingstudio.ro/demos/glass-ui/assets/images/mini10.jpg" alt="">
+                                    <img class="card-raised-img-top mb-30 circle raised-sm w-50" src="{{asset('frontend')}}/assets/images/1.jpg" alt="">
                                     <p class="ratings mb-0"><i class="fas fa-star fs-12 va-middle"></i> <i class="fas fa-star va-middle"></i> <i class="fas fa-star fs-20 va-middle"></i> <i class="fas fa-star va-middle"></i> <i class="fas fa-star fs-12 va-middle"></i></p>
                                     <p class="card-text mb-15">Etiam in gravida ligula. Phasellus a blandit lectus. Sed in libero ac ex pulvinar accumsan at at justo.</p>
                                     <p class="mb-0 fs-12 fw-regular">- Jacob Ginnish | Google.com</p>
@@ -129,7 +141,7 @@
                         <div class="col-lg-4">
                             <div class="card card-w-raised-img-top" data-aos="fade-up" data-aos-delay="100">
                                 <div class="card-body text-center">
-                                    <img class="card-raised-img-top mb-30 circle raised-sm w-50" src="https://kingstudio.ro/demos/glass-ui/assets/images/mini4.jpg" alt="">
+                                    <img class="card-raised-img-top mb-30 circle raised-sm w-50" src="{{asset('frontend')}}/assets/images/1.jpg" alt="">
                                     <p class="ratings mb-0"><i class="fas fa-star fs-12 va-middle"></i> <i class="fas fa-star va-middle"></i> <i class="fas fa-star-half-alt fs-20 va-middle"></i> <i class="fas fa-star va-middle"></i> <i class="fas fa-star fs-12 va-middle"></i></p>
                                     <p class="card-text mb-15">Etiam in gravida ligula. Phasellus a blandit lectus. Sed in libero ac ex pulvinar accumsan at at justo.</p>
                                     <p class="mb-0 fs-12 fw-regular">- Merida Swan | Airbnb.com</p>
@@ -140,7 +152,7 @@
                         <div class="col-lg-4">
                             <div class="card card-w-raised-img-top" data-aos="fade-up" data-aos-delay="200">
                                 <div class="card-body text-center">
-                                    <img class="card-raised-img-top mb-30 circle raised-sm w-50" src="https://kingstudio.ro/demos/glass-ui/assets/images/mini5.jpg" alt="">
+                                    <img class="card-raised-img-top mb-30 circle raised-sm w-50" src="{{asset('frontend')}}/assets/images/3.jpg" alt="">
                                     <p class="ratings mb-0"><i class="fas fa-star fs-12 va-middle"></i> <i class="fas fa-star va-middle"></i> <i class="fas fa-star fs-20 va-middle"></i> <i class="fas fa-star va-middle"></i> <i class="fas fa-star fs-12 va-middle"></i></p>
                                     <p class="card-text mb-15">Etiam in gravida ligula. Phasellus a blandit lectus. Sed in libero ac ex pulvinar accumsan at at justo.</p>
                                     <p class="mb-0 fs-12 fw-regular">- Larry Lin | Facebook.com</p>
@@ -149,13 +161,8 @@
                         </div><!-- / column -->
                     </div><!-- / row -->
                 </div><!-- / container -->
-            </section>
+            </section> --}}
         </section><!--  SRCodeX shop -->
-
-
-
-
-
     </div><!--  SRCodeX main-container -->
 @endsection
 @push('js')

@@ -23,7 +23,7 @@ class CustomerMailController extends Controller
 
 
         // Send email using Laravel Mail
-        Mail::to('info@srcodex.com')->send(new EmailSend($validatedData));
+        Mail::to('riad53701@gmail.com')->send(new EmailSend($validatedData));
         return redirect('/#contact')->with('message', 'Message sent successfully!');
     }
 }
